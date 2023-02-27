@@ -1,3 +1,7 @@
+# # Web Query custom patterns
+user_tests/
+hyquery/config/user.toml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +131,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pycharm
+.idea
+
+# mac indexing files
+*.DS_Store
