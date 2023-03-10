@@ -8,7 +8,5 @@ from hyquery.query import hyquery, make_params
 params = make_params(name=['HD 23127', 'HIP 98355'],
                      element=['FeH', 'CH', 'OH', 'NaH', 'MgH', 'AlH', 'SiH', 'CaH', 'YH', 'BaIIH'],
                      solarnorm='lod09')
-json, response = hyquery(params, verbose=True)
+json, response = hyquery(params, mode='composition', verbose=True, local_test_mode=True)
 print(json)
-
-

@@ -21,6 +21,7 @@ modes_with_params = {
     'star',
     'composition',
     'data',
+    'nea'
 }
 
 modes_all = modes_without_params | modes_with_params

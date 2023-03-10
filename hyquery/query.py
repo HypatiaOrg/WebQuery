@@ -15,14 +15,14 @@ def hyquery(params: Dict[str, str] = None,
         response = requests.get(url, auth=(api_key, "api_token"))
     else:
         response = requests.get(url, auth=(api_key, "api_token"), params=params)
-    if verbose:
-        print(f'Remaining queries {response.headers["X-Rate-Limit-Remaining"]} before reset in ' +
-              f'{response.headers["X-Rate-Limit-Reset"]} seconds.')
     if response.status_code != 200:
         print(f'Error code: {response.status_code}')
         print(f'Error text: {response.text}')
         return None, response
     else:
+        if verbose:
+            print(f'Remaining queries {response.headers["X-Rate-Limit-Remaining"]} before reset in ' +
+                  f'{response.headers["X-Rate-Limit-Reset"]} seconds.')
         json = response.json()
     return json, response
 
