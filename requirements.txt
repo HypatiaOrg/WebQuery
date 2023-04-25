@@ -1,9 +1,2 @@
 toml
 requests
-# not sure these will actuallly be needed, this is just stuff in tests fiels sent be NEA.
-urllib3
-numpy
-pandas
-
-# configobj
-# DB_Handler
