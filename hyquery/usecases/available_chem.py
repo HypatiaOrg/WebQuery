@@ -1,8 +1,7 @@
 from hyquery.query import hyquery
 
 
-verbose = True
-if __name__ == '__main__':
+def compare_live_and_local(verbose: bool = True):
     # data query for default return example
     local_json, local_data_default_response = hyquery(params=None, mode='element',
                                                       verbose=verbose, local_test_mode=True)
@@ -23,3 +22,10 @@ if __name__ == '__main__':
             print(f'{el_str}')
         else:
             print(f'{el_str} <--- Missing from Live!!!!!!')
+
+
+if __name__ == '__main__':
+    # compare_live_and_local(verbose=True)
+    local_json, local_data_default_response = hyquery(params=None, mode='element',
+                                                      verbose=True, local_test_mode=True)
+

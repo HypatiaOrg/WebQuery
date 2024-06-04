@@ -7,7 +7,7 @@ from hyquery.query import hyquery, make_params
 
 verbose = True
 local_test = False
-star_names = ['HD 23127', 'HIP 98355']
+star_names = ['Kepler-11']
 params = make_params(name=star_names,
                      element=['FeH', 'CH', 'OH', 'NaH', 'MgH', 'AlH', 'SiH', 'CaH', 'YH', 'BaIIH'],
                      solarnorm='lod09')

@@ -3,7 +3,7 @@ from hyquery.query import hyquery, make_params
 
 
 verbose = True
-local_test = False
+local_test = True
 params = make_params(name='HD 23127',
                      element=['FeH', 'CH', 'OH', 'NaH', 'MgH', 'AlH', 'SiH', 'CaH', 'YH', 'BaIIH'],
                      solarnorm='lod09')

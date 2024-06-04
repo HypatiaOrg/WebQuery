@@ -34,8 +34,9 @@ def hyquery(params: Dict[str, Any] = None,
     else:
         if verbose:
             print(f'  Query completed successfully.')
-            print(f'  Remaining queries {response.headers["X-Rate-Limit-Remaining"]}, before reset in ' +
-                  f'{response.headers["X-Rate-Limit-Reset"]} seconds.')
+            if 'X-Rate-Limit-Remaining' in response.headers:
+                print(f'  Remaining queries {response.headers["X-Rate-Limit-Remaining"]}, before reset in ' +
+                      f'{response.headers["X-Rate-Limit-Reset"]} seconds.')
             print(f'  Query took {"%2.3f" % (time.time() - start_time)} seconds.')
         json = response.json()
     return json, response
