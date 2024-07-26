@@ -4,8 +4,8 @@ from hyquery.query import hyquery
 
 
 verbose = True
-local_test = True
-star_names = ['kepler-11', 'HD 23127']
+local_test = False
+star_names = ['kepler-11', 'HD 23127', 'HIP 56789']
 params = {"name": star_names}
 
 if __name__ == '__main__':

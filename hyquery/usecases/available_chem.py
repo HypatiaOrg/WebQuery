@@ -5,10 +5,8 @@ def compare_live_and_local(verbose: bool = True):
     # data query for default return example
     local_json, local_data_default_response = hyquery(params=None, mode='element',
                                                       verbose=verbose, local_test_mode=True)
-
     live_json, live_data_default_response = hyquery(params=None, mode='element',
                                                     verbose=verbose, local_test_mode=False)
-
     diff = sorted(set(live_json) - set(local_json))
     local_list = sorted(local_json)
     local_set = set(local_list)
@@ -28,4 +26,6 @@ if __name__ == '__main__':
     # compare_live_and_local(verbose=True)
     local_json, local_data_default_response = hyquery(params=None, mode='element',
                                                       verbose=True, local_test_mode=True)
+    live_json, live_data_default_response = hyquery(params=None, mode='element',
+                                                    verbose=True, local_test_mode=False)
 

@@ -1,5 +1,5 @@
 hypatia_url = "https://hypatiacatalog.com"
-testing_url = 'http://127.0.0.1:8000'
+testing_url = 'http://127.0.0.1'
 
 api_uri = "/hypatia/api/v2/"
 
